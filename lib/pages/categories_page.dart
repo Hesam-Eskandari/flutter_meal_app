@@ -4,17 +4,13 @@ import '../widgets/category_item.dart';
 
 
 class CategoriesPage extends StatelessWidget {
-  static const routeName = '/';
+  static const routeName = '/categories';
 
   const CategoriesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Meals'),
-      ),
-      body: GridView(
+    return GridView(
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 250,
             childAspectRatio: 3/2,
@@ -31,7 +27,6 @@ class CategoriesPage extends StatelessWidget {
                 )
             )
         ).toList(),
-      )
     );
   }
 }

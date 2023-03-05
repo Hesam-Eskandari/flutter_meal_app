@@ -3,15 +3,9 @@ import '../mock_data/meals_mock_data.dart';
 import '../widgets/meal_item.dart';
 
 class CategoryItemPage extends StatelessWidget {
-  static const routName = '/category-item-page';
+  static const routeName = '/category-item-page';
 
   const CategoryItemPage({super.key});
-
-  // final String _categoryId;
-  // final String _categoryTitle;
-  //
-  // CategoryItemPage({required String categoryId, required String categoryTitle}) :
-  //       _categoryId = categoryId, _categoryTitle = categoryTitle, super(key: ValueKey(categoryId));
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +19,7 @@ class CategoryItemPage extends StatelessWidget {
       body: ListView.builder(itemBuilder: (ctx, index) {
         final meal = selectedMeals[index];
         return MealItem(
+          id: meal.id,
           imageUrl: meal.imageUrl,
           title: meal.title,
           affordability: meal.affordability,
